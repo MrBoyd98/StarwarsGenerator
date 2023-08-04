@@ -1,0 +1,198 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+.background{
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-image:url(planetwallpaper.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.grid{
+    
+    display:grid;
+  
+    grid-template-columns: auto auto auto;
+    color:rgb(255, 255, 255);
+    font-family:fantasy;
+}
+
+.header_container{
+    display: flex;
+    flex-direction: row;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    height: 130px;
+    justify-content:center;
+    background:rgb(77,77,77);
+    background: radial-gradient(circle, rgba(77,77,77,1) 8%, rgba(0,0,0,1) 100%);
+    border-bottom: 4px solid rgb(255, 213, 0);
+}
+
+.logo img{
+height: 150px;
+}
+.switch_button a{
+    
+    text-decoration: none;
+    color:rgba(242, 214, 5, 0.527);
+    transition: all .3s;
+}
+
+.switch_button a:hover{
+ color: rgb(242, 214, 5);
+ transition: all .3s;
+}
+
+.switch_button{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: fit-content;
+    top: 50px;
+    left: 70px;
+}
+
+.submit_box{
+    display: flex;
+    flex-direction: row;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    height: 30px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button{
+    display: flex;
+    justify-content: right;
+    color: rgb(0, 0, 0);
+    width:50%;
+    height: 40px;
+    justify-content: center;
+    background: rgb(242,5,5);
+    background: radial-gradient(circle, rgb(255, 223, 16) 14%, rgba(0,0,0,1) 100%); 
+    transition: all .5s;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-top: 20px;
+    
+    
+    
+
+}
+.button:hover{
+    transition: all .3s;
+    background: rgb(242, 214, 5);
+    background: radial-gradient(circle, rgb(254, 239, 102) 14%, rgb(255, 217, 0) 100%);  
+    box-shadow: 3px 1px 7px 7px rgb(242, 238, 160);
+     
+}
+.button button{
+    font-family: fantasy;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    border: transparent;
+    width: 100%;
+    height:50px;
+}
+.button button:hover{
+    
+    color: rgb(125, 123, 123);
+   
+}
+.saberbottom{
+    display: inline-flex;
+    height: 40px;
+    width: 200px;
+    background-image: url(handle.png);
+    background-size: contain;
+    margin-top: 20px;
+    border-left: 1px solid rgb(252, 122, 66);
+    
+    
+}
+.character_container{
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    height: 600px;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin: 15px;
+    margin-top: 50px;
+}
+
+#box{
+    margin-top: 15px;
+    margin-left: 20px;
+    display:flex;
+    height: 90px;
+    width:500px;
+}
+
+/*Card Styling*/
+
+ul{
+    list-style:none;
+}
+
+li{
+    margin-top:5px
+}
+#card{
+    display: flex;
+    flex-direction:column;
+    background:rgb(72, 61, 61);
+    background: radial-gradient(circle, rgba(77,77,77,1) 8%, rgba(0,0,0,1) 100%);
+    height: 250%;
+    width:500px;
+    border-radius: 8px;
+}
+
+#card_header{
+    width:99%;
+    border-radius:8px 8px 0px 0px ;
+    background: rgb(242,181,5);
+    background: radial-gradient(circle, rgb(255, 206, 59) 14%, rgba(0,0,0,1) 100%);
+    margin: 4px;
+    text-align: center;
+    color:rgb(72, 61, 61);
+    color: radial-gradient(circle, rgba(77,77,77,1) 8%, rgba(0,0,0,1) 100%);
+}
+
+#card_image{
+    display: flex;
+    width: fit-content;
+    border-right: 2px solid rgb(242,181,5);
+}
+
+#card_image img{
+    width: fit-content;
+    height: 197px;
+}
+
+#card_contents{
+    display: flex;
+    width: 200px;
+    position: relative;
+    bottom:190px;
+    left:230px;
+}
+
+.b_list{
+
+    display: inline;
+    
+}
+
+.bp_item, .f_item, .m_item, .b_item{
+    width: 200px;
+    font-size: 20px;
+    color: rgb(255, 206, 59);
+    border-bottom: 1px solid rgb(242,181,5);
+}

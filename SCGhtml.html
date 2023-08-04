@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Character Generator</title>
+    <link rel="stylesheet" href="SCGcss.css">
+</head>
+<body>
+    <div class="background">
+        <div class="grid">
+            <div class="header_container"> 
+                <div class="logo"><img src="Starwars-logo.png"></div>
+                <div class="switch_button"><a href="#"> Back to Portfolio </a></div>
+
+            </div>
+            <div class="submit_box">
+                
+                    <div class="button"> 
+                        <button class="RandomCharacter">Generate your Character</button>
+                    </div><div class="saberbottom"> </div>
+                    </div>
+
+            <div class="character_container">
+                <div id="box" class="bio_box">
+                    <div id="card" class="bio_card">
+                        <div id="card_header">Bio</div>
+                        <div id="card_image"><img src="kyloren.jpg"></div>
+                        <div id="card_contents" class="name_contents"> 
+                            
+                            <ul class="b_list">
+                                <li id="header" class="b_header">Name:</li>
+                                <li id="name_content" class="b_item">-</li>
+                                <li id="header" class="b_header">Birth Year (Before Battle of Yavin):</li>
+                                <li id="by_content" class="b_item">-</li>
+                                <li id="header" class="b_header">Gender:</li>
+                                <li id="gender_content" class="b_item">-</li>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="box" class="measurments_box">
+                    <div id="card" class="m_card">
+                        <div id="card_header">Measurments</div>
+                        <div id="card_image"><img src="wampa.jpg"></div>
+                        <div id="card_contents" class="m_contents"> 
+
+                            <ul  class="m_list">
+                                <li id="header" class="m_header">Height (cm):</li>
+                                <li id="height_content" class="m_item">-</li>
+                                <li id="header" class="m_header">Mass (kg):</li>
+                                <li id="mass_content" class="m_item">-</li>
+                                
+
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div id="box" class="features_box">
+                    <div id="card" class="features_card">
+                        <div id="card_header">Features</div>
+                        <div id="card_image"><img src="maul-eyes.jpg"></div>
+                        <div id="card_contents" class="features_contents"> 
+
+                            <ul class="f_list">
+                                <li id="header" class="f_header">Eye Color:</li>
+                                <li id="ec_content" class="f_item">-</li>
+                                <li id="header" class="f_header">Hair Color:</li>
+                                <li id="hc_content" class="f_item">-</li>
+                                <li id="header" class="f_header">Skin Color:</li>
+                                <li id="sc_content" class="f_item">-</li>
+
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    
+    <script>
+       
+            // Button Formatting
+            const name = document.getElementById("name_content")
+            const birth_year = document.getElementById("by_content")
+            const gender = document.getElementById("gender_content")
+            const height = document.getElementById("height_content")
+            const mass = document.getElementById("mass_content")
+            const eye_color = document.getElementById("ec_content")
+            const hair_color = document.getElementById("hc_content")
+            const skin_color = document.getElementById("sc_content")
+           
+
+
+            const button = document.querySelector(".RandomCharacter");
+            
+            button.addEventListener('click', (event) => {
+                event.preventDefault()
+                
+            
+             const randomNumber = Math.ceil(Math.random()*83)
+            fetch(`https://swapi.dev/api/people/${randomNumber}/`)
+             .then(response => response.json())
+             .then(character => {
+                console.log(character)
+                name_content.innerHTML = character['name'];
+                birth_year.innerHTML = character['birth_year']
+                gender.innerHTML = character['gender']
+                height.innerHTML = character['height']
+                mass.innerHTML = character['mass']
+                eye_color.innerHTML = character['eye_color']
+                hair_color.innerHTML = character['hair_color']
+                skin_color.innerHTML = character['skin_color']
+  
+             })
+            
+            })
+
+        
+
+
+
+          
+
+           
+
+    </script>
+</body> 
+</html>
